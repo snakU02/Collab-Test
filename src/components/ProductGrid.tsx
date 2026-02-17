@@ -51,9 +51,9 @@ export default function ProductGrid() {
         <section id="shop" className="container">
             <span className="section-subtitle">Curated Selection</span>
             <h2 className="section-title">New Arrivals</h2>
-            <div className="product-grid" style={{ marginTop: '4rem' }}>
+            <div className="product-grid" style={{ marginTop: '5rem', gap: '4rem 2rem' }}>
                 {PRODUCTS.map((product) => (
-                    <div key={product.id} className="product-card">
+                    <div key={product.id} className="product-card" style={{ cursor: 'pointer' }}>
                         <div className="product-image-wrapper">
                             <Image
                                 src={product.image}
@@ -62,16 +62,10 @@ export default function ProductGrid() {
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
-                            <div className="add-to-cart-overlay">
-                                <button className="btn btn-primary" style={{ padding: '0.8rem 1.5rem', fontSize: '0.7rem' }}>
-                                    Quick Add
-                                </button>
-                            </div>
                         </div>
-                        <div className="product-info">
-                            <span className="product-category">{product.category}</span>
-                            <h3 className="product-name">{product.name}</h3>
-                            <span className="product-price">{product.price}</span>
+                        <div className="product-info" style={{ textAlign: 'left' }}>
+                            <h3 className="product-name" style={{ fontSize: '0.9rem', fontWeight: 400, marginBottom: '0.25rem' }}>{product.name}</h3>
+                            <span className="product-price" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{product.price}</span>
                         </div>
                     </div>
                 ))}

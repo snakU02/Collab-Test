@@ -17,7 +17,7 @@ export default function Header() {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link href="/" className="logo-text">AURA <span className="highlight">LUXE</span></Link>
-        
+
         <nav className="nav-menu">
           <Link href="#shop" className="nav-link">Shop</Link>
           <Link href="#collections" className="nav-link">Collections</Link>
@@ -64,58 +64,65 @@ export default function Header() {
 
         .logo-text {
           font-family: 'Playfair Display', serif;
-          font-size: 1.5rem;
-          font-weight: 700;
-          letter-spacing: 2px;
+          font-size: 1.25rem;
+          font-weight: 400;
+          letter-spacing: 4px;
+          text-transform: uppercase;
         }
 
         .highlight {
-          color: var(--secondary);
+          font-weight: 700;
+          color: var(--primary);
         }
 
         .nav-menu {
           display: flex;
-          gap: 2.5rem;
+          gap: 3rem;
         }
 
         .nav-link {
-          font-size: 0.85rem;
-          font-weight: 600;
+          font-size: 0.7rem;
+          font-weight: 400;
           text-transform: uppercase;
-          letter-spacing: 1px;
-          opacity: 0.8;
+          letter-spacing: 2px;
+          opacity: 0.6;
         }
 
         .nav-link:hover {
           opacity: 1;
-          color: var(--secondary);
+          color: var(--primary);
         }
 
         .header-actions {
           display: flex;
-          gap: 1.5rem;
+          gap: 2rem;
           align-items: center;
         }
 
         .icon-btn {
           position: relative;
           color: var(--text-main);
+          opacity: 0.8;
+        }
+
+        .icon-btn:hover {
+          opacity: 1;
         }
 
         .cart-count {
           position: absolute;
-          top: -8px;
-          right: -8px;
-          background: var(--secondary);
-          color: white;
-          font-size: 0.6rem;
-          width: 16px;
-          height: 16px;
+          top: -6px;
+          right: -6px;
+          background: var(--primary);
+          color: var(--background);
+          font-size: 0.5rem;
+          width: 14px;
+          height: 14px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-weight: 700;
+          font-weight: 400;
         }
 
         @media (max-width: 768px) {

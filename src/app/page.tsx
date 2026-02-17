@@ -9,27 +9,29 @@ export default function Home() {
       <Header />
       <Hero />
 
-      <section className="collections" id="collections" style={{ backgroundColor: '#fff' }}>
+      <section className="collections" id="collections">
         <div className="container">
           <span className="section-subtitle">Exclusives</span>
           <h2 className="section-title">The Winter Edit</h2>
-          <div style={{ position: 'relative', height: '500px', marginTop: '3rem' }}>
+          <div style={{ position: 'relative', height: '600px', marginTop: '3rem', backgroundColor: 'var(--accent)' }}>
             <img
               src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop"
               alt="Collection banner"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }}
             />
             <div style={{
               position: 'absolute',
-              top: '50%',
-              left: '10%',
-              transform: 'translateY(-50%)',
-              color: 'white',
-              maxWidth: '400px'
+              bottom: '10%',
+              left: '5%',
+              color: 'var(--text-main)',
+              maxWidth: '450px',
+              padding: '2rem',
+              backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              backdropFilter: 'blur(10px)'
             }}>
-              <h3 style={{ fontSize: '3rem', marginBottom: '1.5rem', fontFamily: 'Playfair Display' }}>Timeless Fashion</h3>
-              <p style={{ marginBottom: '2rem' }}>Discover pieces that transcend seasons. Handcrafted with the finest Italian silks and wools.</p>
-              <a href="#shop" className="btn btn-primary" style={{ backgroundColor: 'white', color: 'black' }}>Explore Collection</a>
+              <h3 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 300 }}>Timeless Fashion</h3>
+              <p style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Pieces that transcend seasons. Handcrafted with precision.</p>
+              <a href="#shop" className="btn btn-primary">Explore Now</a>
             </div>
           </div>
         </div>
@@ -38,20 +40,20 @@ export default function Home() {
       <ProductGrid />
 
       {/* Why Choose Us Section */}
-      <section style={{ backgroundColor: '#f9f9f9' }}>
+      <section style={{ borderTop: '1px solid var(--border)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '3rem', textAlign: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4rem', textAlign: 'center' }}>
             <div>
-              <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontWeight: '600' }}>Free Shipping</h4>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Complimentary standard shipping on all orders over $200.</p>
+              <h4 style={{ fontSize: '1rem', marginBottom: '1rem', fontWeight: '500', letterSpacing: '1px', textTransform: 'uppercase' }}>Free Shipping</h4>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Complimentary on all orders over $200.</p>
             </div>
             <div>
-              <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontWeight: '600' }}>Sustainable Luxury</h4>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>We are committed to ethical sourcing and sustainable production.</p>
+              <h4 style={{ fontSize: '1rem', marginBottom: '1rem', fontWeight: '500', letterSpacing: '1px', textTransform: 'uppercase' }}>Sustainable</h4>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Committed to ethical sourcing and production.</p>
             </div>
             <div>
-              <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontWeight: '600' }}>Expert Support</h4>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Our lifestyle consultants are here to assist you 24/7.</p>
+              <h4 style={{ fontSize: '1rem', marginBottom: '1rem', fontWeight: '500', letterSpacing: '1px', textTransform: 'uppercase' }}>Support</h4>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Available to assist you 24/7.</p>
             </div>
           </div>
         </div>
